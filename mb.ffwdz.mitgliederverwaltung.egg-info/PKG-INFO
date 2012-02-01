@@ -1,0 +1,23 @@
+Metadata-Version: 1.0
+Name: mb.ffwdz.mitgliederverwaltung
+Version: 0.1
+Summary: UNKNOWN
+Home-page: http://svn.plone.org/svn/collective/
+Author: Max Brauer
+Author-email: max.brauer@inqbus.de
+License: GPL
+Description: Introduction
+        ============
+        
+        
+        
+        Changelog
+        =========
+        
+        0.1dev (unreleased)
+        -------------------
+        
+        - Initial release
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python

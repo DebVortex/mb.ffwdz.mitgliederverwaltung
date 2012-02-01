@@ -1,0 +1,49 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  lang="de"
+  metal:use-macro="here/main_template/macros/master"
+  i18n:domain="mb.ffwdz.mitgliederverwaltung">
+  
+  <body>
+    <div metal:fill-slot="main" class="business-entry">
+      <tal:main-macro metal:define-macro="main">
+        <tal replace="structure provider:plone.abovecontenttitle"></tal>
+        <div align="center">
+          <h1 tal:content="view/context/title">[TITLE]</h1>
+        </div>
+	    <div tal:replace="structure provider:plone.belowcontenttitle" />
+	    <div align="center" style="clear:both">
+	    Klicken Sie 
+	    <a tal:attributes="href view/get_back_link">hier</a> 
+	    um zurück zur Uebersicht zu gelangen.
+	    </div>
+		
+	    <div tal:replace="structure provider:plone.abovecontentbody" />
+	      <div tal:repeat="jahr view/get_ehrungen_this_year" class="ehrungsbox" style="float:left">
+	        <b>
+	      	  Ehrungen für<div tal:replace="jahr/ehrenjahr">[EHRENJAHR]</div> Jahr (dieses Jahr):
+	      	</b>
+	      	<br/>
+	      	<div tal:repeat="kamerad jahr/kameraden">
+	      	  <a tal:attributes="href kamerad/url" tal:content="kamerad/name">[NAME]</a>
+	      	</div>
+	      </div>
+	      
+	      <div class="visualClear"> </div>
+	      
+	      <div tal:repeat="jahr view/get_ehrungen_next_year" class="ehrungsbox" style="float:left">
+	        <b>
+	      	  Ehrungen für<div tal:replace="jahr/ehrenjahr">[EHRENJAHR]</div> Jahr (nächsts Jahr):
+	      	</b>
+	      	<br/>
+	      	<div tal:repeat="kamerad jahr/kameraden">
+	      	  <a tal:attributes="href kamerad/url" tal:content="kamerad/name">[NAME]</a>
+	      	</div>
+	      </div>
+	    <div tal:replace="structure provider:plone.belowcontentbody" />
+      </tal:main-macro>
+    </div>
+  </body>
+</html>

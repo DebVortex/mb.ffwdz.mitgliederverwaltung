@@ -1,0 +1,189 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  lang="de"
+  metal:use-macro="here/main_template/macros/master"
+  i18n:domain="mb.ffwdz.mitgliederverwaltung">
+  
+  <body>
+    <div metal:fill-slot="main" class="business-entry">
+      <tal:main-macro metal:define-macro="main">
+        <tal replace="structure provider:plone.abovecontenttitle"></tal>
+
+        <div class="ausbildungen">
+	  <h2>Ausbildungen:</h2>
+	  <div tal:condition="context/ausb_tmft">
+	    Kreisausbilder: TM/FT <span tal:condition="context/ausb_tmft_fort">(F)</span>
+	  </div>
+	  
+	  <div tal:condition="context/ausb_maschinist">
+	    Kreisausbilder: Maschinist <span tal:condition="context/ausb_maschinist_fort">(F)</span>
+	  </div>
+	  <div tal:condition="context/ausb_atemschutz">
+	    Kreisausbilder: Atemschutz <span tal:condition="context/ausb_atemschutz_fort">(F)</span>
+	  </div>
+	  <div tal:condition="context/ausb_sprechfunk">
+	    Kreisausbilder: Sprechfunk <span tal:condition="context/ausb_sprechfunk_fort">(F)</span>
+	  </div>
+	  <div tal:condition="context/ausb_kettensaege">
+	    Kreisausbilder: Kettensaege
+	  </div>
+	  <div tal:condition="context/ausb_jugend">
+	    Kreisausbilder: Jugend-FW  <span tal:condition="context/ausb_jugend_fort">(F)</span>
+	  </div>
+	  <div tal:condition="context/kreisjugendwart">
+	    Kreisjugendfeuerwehrwart <span tal:condition="context/kreisjugendwart_fort">(F)</span>
+	  </div>
+	  <div tal:condition="context/geraetewart">
+	    Geraetewart
+	  </div>
+	  <div tal:condition="context/atemschutz_geraetewart">
+	    Atemschutzgeraetewart
+	  </div>
+	  <div tal:condition="context/wehrleiter">
+	    Wehrleiter <span tal:condition="context/wehrleiter_fort">(F)</span>
+	  </div>
+	  <div tal:condition="context/verbandsfuehrer">
+	    Verbandsfuehrer
+	  </div>
+	  <div tal:condition="context/zugfuehrer">
+	    Zugfuehrer <span tal:condition="context/zugfuehrer_fort">(F)</span>
+	  </div>
+	  <div tal:condition="context/gruppenfuehrer">
+	    Gruppenfuehrer <span tal:condition="context/gruppenfuehrer_fort">(F)</span>
+	  </div>
+	  <div tal:condition="context/maschinist">
+	    Maschinist
+	  </div>
+	  <div tal:condition="context/drehleitermaschinist">
+	    Drehleitermaschinist
+	  </div>
+	  <div tal:condition="context/technischehileleistung">
+	    tech. Hilfeleistung <span tal:content="view/tech_stand|nothing" />
+	  </div>
+	  <div tal:condition="context/technischehileleistung_part_rettung">
+	    tech. Hilfeleistung (Patientengerechte Rettung)
+	  </div>
+	  <div tal:condition="context/technischehileleistung_hoehen_u_tiefen">
+	    tech. Hilfeleistung (Retten aus Hoehen und Tiefen)
+	  </div>
+	  <div tal:condition="context/sicherheitsbeauftragter">
+	    Sicherheitsbeauftragter
+	  </div>
+	  <div tal:condition="context/strahlenschutzbeauftragter">
+	    Strahlenschutzbeauftragter <span tal:condition="context/strahlenschutzbeauftragter_fort">(F)</span>
+	  </div>
+	  <div tal:condition="context/sichtung_stab_u_tel">
+	    Sichtung Stab und TEL
+	  </div>
+	  <div tal:condition="context/einweisung_stab_u_tel">
+	    Einweisung Stab und TEL
+	  </div>
+	  <div tal:condition="context/jugendwart">
+	    Jugendfeuerwehrarbeit
+	  </div>
+	  <div tal:condition="context/kampfrichter_sport">
+	    Kampfrichter Feuerwehrsport
+	  </div>
+	  <div tal:condition="context/richter_leistungsabzeichen">
+	    Wertungsrichter Leistungsabzeichen
+	  </div>
+	  <div tal:condition="context/abc">
+	    ABC-Basislehrgang
+	  </div>
+	  <div tal:condition="context/abc_technik">
+	    ABC-Technik
+	  </div>
+	  <div tal:condition="context/abc_messen">
+	    ABC-Messen
+	  </div>
+	  <div tal:condition="context/abc_dekonp">
+	    ABC-DekonP
+	  </div>
+	  <div tal:condition="context/dekon_maschinist">
+	    Dekon-Maschinist
+	  </div>
+	  <div tal:condition="context/abcfuehrung">
+	    Fuehren in ABC-Einsaetzen <span tal:condition="context/abcfuehrung_fort">(F)</span>
+	  </div>
+	  <div tal:condition="context/messleitwagen">
+	    Fuehrer Messleitwagen <span tal:condition="context/messleitwagen_fort">(F)</span>
+	  </div>
+	  <div tal:condition="context/vorb_brandschutz">
+	    Vorbeugender Brandschutz
+	  </div>
+	  <div tal:condition="context/disma">
+	    Arbeiten mit DISMA4 <span tal:condition="context/disma_fort">(F)</span>
+	  </div>
+	  <div tal:condition="context/sysadmin">
+	    Schulung in Systemadministration
+	  </div>
+	  <div tal:condition="context/kettensaege">
+	    Kettensaegenlehrgang
+	  </div>
+	  <div tal:condition="context/atemschutz">
+	    Atemschutz
+	  </div>
+	  <div tal:condition="context/truppfuehrer">
+	    Truppfuehrer
+	  </div>
+	  <div tal:condition="context/sprechfunker">
+	    Sprechfunker
+	  </div>
+	  <div tal:condition="context/truppmann">
+	    Truppmann
+	  </div>
+	</div>
+	
+	<div class="kameradcontent">
+          <h1 class="documentFirstHeading">
+	    Kamerad <tal:title replace="context/title"/>
+	  </h1>
+        
+	  <div tal:replace="structure provider:plone.belowcontenttitle" />
+	
+	  <div tal:replace="structure provider:plone.abovecontentbody" />
+
+	  <div class="kamerad_links">
+	    Diesen Kamerad <a tal:attributes="href view/get_edit_link">bearbeiten</a> / 
+	    <a tal:attributes="href view/get_deletion_link">löschen</a>.<br /><br />
+	  </div>
+	
+	  <div tal:condition="context/title|nothing">
+	    <b>Name: </b><div tal:replace="context/title" />
+	  </div>
+	
+	  <div tal:condition="context/anschrift|nothing">
+	    <b>Anschrift: </b><div tal:replace="context/anschrift" />
+	  </div>
+	
+	  <div tal:condition="context/telefon|nothing">
+	    <b>Telefonnummer: </b><div tal:replace="context/telefon" />
+	  </div>
+	
+	  <div tal:condition="context/geburtsdatum|nothing">
+	    <b>Geburtsdatum: </b><div tal:replace="view/geburtsdatum" />
+	  </div>
+	
+	  <br />
+	
+	  <div tal:condition="context/dienstgrad|nothing">
+	    <b>Dienstgrad: </b><div tal:replace="context/dienstgrad" />
+	  </div>
+	
+	  <div tal:condition="context/mitglied_seit|nothing">
+	    Dieser Kamerad ist Mitglied seit <b tal:content="view/mitglied_seit" />
+	  </div>
+	
+	  <div tal:condition="context/hauptamtlich|nothing">
+	    <br />
+	    Dieser Kamerad arbeitet <b>Hauptamtlich</b>.
+	  </div>
+	</div>
+
+	<div tal:replace="structure provider:plone.belowcontentbody" />
+      </tal:main-macro>
+    </div>
+  </body>
+</html>

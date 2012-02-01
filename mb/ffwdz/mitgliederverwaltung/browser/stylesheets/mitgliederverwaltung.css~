@@ -1,0 +1,99 @@
+/*
+Allgemeines
+===========
+*/
+
+#edit-bar {
+  display: none !important;
+}
+
+.managePortletsFallback {
+  display: none !important;
+}
+
+#portal-breadcrumbs {
+  display: none !important;
+}
+
+#portal-searchbox {
+  display: none !important;
+}
+
+#portal-personaltools {
+  display: none !important;
+}
+
+#plone-document-byline {
+  display: none !important;
+}
+
+#portal-globalnav {
+  background-color: #AF312B;
+}
+
+#portal-globalnav li.plain a {
+  background-color: #AF312B !important;
+  color: White;
+}
+
+#portal-globalnav li.selected a {
+  background-color: #990100 !important;
+  color: White;
+}
+
+#portal-footer {
+  display: none !important;
+}
+
+#portal-siteactions {
+  display: none !important;
+}
+
+/*
+Kamerad-View
+============
+*/
+
+div.kameradcontent {
+    margin-left: 5em;
+}
+
+div.ausbildungen {
+    margin-top: 0em;
+    margin-right: 5em;
+    padding: 1em 1em 1em 1em;
+    float: right;
+    background-color: #DDDDDD;
+    -webkit-border-radius: 20px; 
+    -moz-border-radius: 20px; 
+    border-radius: 20px;
+}
+
+div.ehrungsbox {
+    margin-top: 2em;
+    margin-right: 5em;
+    padding: 1em 1em 1em 1em;
+    float: right;
+    background-color: #DDDDDD;
+    -webkit-border-radius: 20px; 
+    -moz-border-radius: 20px; 
+    border-radius: 20px;
+}
+/*
+Zug-View
+========
+*/
+
+.zugrow {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+.zugrow.header {
+  background-color: #AF312B;
+  color: White;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}

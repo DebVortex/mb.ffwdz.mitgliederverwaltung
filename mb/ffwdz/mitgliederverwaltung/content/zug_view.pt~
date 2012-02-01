@@ -1,0 +1,56 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  lang="de"
+  metal:use-macro="here/main_template/macros/master"
+  i18n:domain="mb.ffwdz.mitgliederverwaltung">
+  
+  <body>
+    <div metal:fill-slot="main" class="business-entry">
+      <tal:main-macro metal:define-macro="main">
+        <tal replace="structure provider:plone.abovecontenttitle"></tal>
+
+	<div align="center">
+          <h1 class="documentFirstHeading">
+	    <tal:title replace="context/title"/>
+	  </h1>
+	  <div>
+	    Einen Kameraden <a tal:attributes="href view/get_add_link">hinzufuegen</a>.<br />
+	    Diesen Zug <a tal:attributes="href view/get_edit_link">bearbeiten</a>
+	    oder <a tal:attributes="href view/get_deletion_link">loeschen</a>.<br />
+	    <tal:ehrungen condition="view/context/ehrenjahre|nothing">
+	    Zur <a tal:attributes="href view/get_overview_link">Uebersicht</a> der Ehrungen für dieses Jahr.
+	    </tal:ehrungen>
+	  </div>
+        
+	  <div tal:replace="structure provider:plone.belowcontenttitle" />
+	
+	  <div tal:replace="structure provider:plone.abovecontentbody" />
+	
+	  <table border="2">
+	    <tr>
+	      <th class="zugrow header">Name</th>
+	      <th class="zugrow header">Anschrift</th>
+	      <th class="zugrow header">Telefon</th>
+	      <th class="zugrow header">Dienstgrad</th>
+	    </tr>
+	    <tal:kameraden repeat="kamerad view/get_kameraden">
+	      <tr>
+	        <td class="zugrow content">
+		  <a tal:content="kamerad/name|nothing" tal:attributes="href kamerad/url">
+		    [NAME]
+		  </a>
+		</td>
+	        <td class="zugrow content" tal:content="kamerad/anschrift|nothing">[ANSCHRIFT]</td>
+	        <td class="zugrow content" tal:content="kamerad/telefon|nothing">[TELEFON]</td>
+	        <td class="zugrow content" tal:content="kamerad/dienstgrad|nothing">[DIENSTGRAD]</td>
+	      </tr>
+	    </tal:kameraden>
+	  </table>
+	</div>
+
+      </tal:main-macro>
+    </div>
+  </body>
+</html>

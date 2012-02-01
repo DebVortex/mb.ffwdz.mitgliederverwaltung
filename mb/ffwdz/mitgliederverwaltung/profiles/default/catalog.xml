@@ -1,0 +1,9 @@
+<?xml version="1.0"?>                                                                                                                              
+<object name="portal_catalog">
+    <index name="eintrittsjahr" meta_type="FieldIndex">                                                                                      
+        <indexed_attr value="eintrittsjahr"/>                                                                                                    
+    </index>
+    <index name="uebergeordneter_zug" meta_type="FieldIndex">                                                                                      
+        <indexed_attr value="uebergeordneter_zug"/>                                                                                                    
+    </index>
+</object>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>                                                                                                                              
+<object name="portal_catalog">
+    <index name="Eintrittsjahr" meta_type="FieldIndex">
+        <indexed_attr value="eintrittsjahr"/>
+    </index>
+</object>
+
+<?xml version="1.0"?>                                                                                                                              
+<object name="portal_catalog">
+</object>

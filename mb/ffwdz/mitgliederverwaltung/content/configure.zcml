@@ -1,0 +1,43 @@
+<configure                                                                                                                                         
+    xmlns="http://namespaces.zope.org/zope"                                                                                                        
+    xmlns:grok="http://namespaces.zope.org/grok"                                                                                                   
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"                                                                                   
+    xmlns:browser="http://namespaces.zope.org/browser"                                                                                             
+    i18n_domain="inqbus.bizdict">                                                                                                                  
+                                                                                                                                                   
+    <!-- Grok the package to initialise schema interfaces and content classes -->                                                                  
+    <grok:grok package="." />  
+
+    <browser:page                                                                                                                                  
+      for="*"                                                                                                                                      
+      name="kamerad_view"
+      class=".views.KameradView"
+      template="kamerad_view.pt"                                                                                                       
+      permission="zope2.View"                                                                                                                      
+    />
+
+    <browser:page                                                                                                                                  
+      for="*"                                                                                                                                      
+      name="zug_view"
+      class=".views.ZugView"
+      template="zug_view.pt"                                                                                                       
+      permission="zope2.View"                                                                                                                      
+    />
+
+    <browser:page                                                                                                                                  
+      for="*"                                                                                                                                      
+      name="honour_overview"
+      class=".views.HonourOverview"
+      template="overview_view.pt"                                                                                                       
+      permission="zope2.View"                                                                                                                      
+    />
+
+    <browser:page                                                                                                                                  
+      for="*"                                                                                                                                      
+      name="zug_export"
+      class=".views.ExportView"
+      permission="zope2.View"                                                                                                                      
+    />
+
+
+</configure>
