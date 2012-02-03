@@ -187,7 +187,7 @@ class ExportView(BrowserView):
                     user.id.encode('utf-8')
                 )
                 for attr in kamerad_attr:
-                    user_as_xml[attr] = user.get(attr, "")
+                    user_as_xml.attrib[attr] = str(getattr(user, attr, "None"))
                 zug_as_xml.append(user_as_xml)
             root.append(zug_as_xml)
         self.request.response.setHeader('Content-Type', 'application/xml')
